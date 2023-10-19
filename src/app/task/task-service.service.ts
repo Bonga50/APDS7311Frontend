@@ -13,4 +13,7 @@ export class TaskServiceService {
   addTask_service(taskName: string, taskDescription:String, taskStatus:string){
     this.http.post('https://localhost:8000/createtasks',{task: taskName,completed:true}).subscribe(data =>{console.log(data)});
   }
+  getTasks_service(){
+    this.http.get('https://localhost:8000/tasks').subscribe(data =>{console.log(data)});
+  }
 }
