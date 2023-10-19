@@ -1,0 +1,17 @@
+
+
+<h1>Add Task details below</h1>
+<p>This is a funny task for fun</p>
+
+<form (submit)="onaddtask(addtask)" #addtask="ngForm">
+
+    <input type="text" ngModel name="txtTaskName" placeholder="Task name" required minlength="5" pattern="^[a-zA-Z0-9\s_-]+$" #taskName="ngModel"/>
+    <br/>
+    <input type="text" ngModel name="txtTaskDesctiption" placeholder="Task desctiption" required minlength="5" pattern="^[a-zA-Z0-9\s_-]+$"/>
+    <br/>
+    <input type="text" ngModel name="txtTaskStatus" placeholder="Task Status" required minlength="5" pattern="^[a-zA-Z0-9\s_-]+$"/>
+    <br/>
+    <Button type="submit">Add task</Button>
+</form>
+
+
