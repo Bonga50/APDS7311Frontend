@@ -1,27 +1,27 @@
 <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
   <label>
     Name:
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" pattern="^[a-zA-Z0-9\s_-]+$">
   </label>
 
   <label>
     Surname:
-    <input type="text" formControlName="surname">
+    <input type="text" formControlName="surname" pattern="^[a-zA-Z0-9\s_-]+$">
   </label>
 
   <label>
     Email:
-    <input type="email" formControlName="email">
+    <input type="email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
   </label>
 
   <label>
     Username:
-    <input type="text" formControlName="username">
+    <input type="text" formControlName="username" pattern="^[a-zA-Z0-9\s_-]+$">
   </label>
 
   <label>
     Password:
-    <input type="password" formControlName="password">
+    <input type="password" formControlName="password" pattern="^[a-zA-Z0-9\s_-]+$">
   </label>
 
   <button type="submit">Submit</button>

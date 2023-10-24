@@ -33,6 +33,13 @@ export class UserDetailsComponent implements OnInit  {
       this.signUpForm.value.email!!,
       this.signUpForm.value.password!!
     );
+
+  // Clear the form
+  this.signUpForm.reset();
+
+  // Display an alert message
+  alert('Form submitted successfully!');
+
   }
 
 
